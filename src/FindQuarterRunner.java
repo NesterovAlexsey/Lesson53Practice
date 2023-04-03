@@ -49,8 +49,5 @@ public class FindQuarterRunner {
           System.out.println("Точка лежит на оси y");
         }
     }
-
-    System.out.println(checkPoint);
   }
-
 }
