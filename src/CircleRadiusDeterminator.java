@@ -17,7 +17,16 @@ public class CircleRadiusDeterminator {
 
     Point checkPoint = Point.read(read);
 
-    int squareX = checkPoint.getX()*checkPoint.getX();
-    int squareY = checkPoint.getY()*checkPoint.getY();
+    int squareX = (int) Math.pow(checkPoint.getX(), 2);
+    int squareY = (int) Math.pow(checkPoint.getY(), 2);
+    int squareR = (int) Math.pow(rad, 2);
+
+    if ((squareX + squareY) < squareR) {
+      System.out.println("Введенная точка находиться внутри окружности");
+    } else if ((squareX + squareY) > squareR) {
+      System.out.println("Введенная точка находиться вне окружности");
+    } else {
+      System.out.println("Введенная точка лежит на окружности");
+    }
   }
 }
