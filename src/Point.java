@@ -39,4 +39,9 @@ public class Point {
     int y = Integer.parseInt(coordinates.substring(sepIndex + 1).trim());
     return new Point(x, y);
   }
+
+  @Override
+  public String toString(){
+    return getX() + " " + getY();
+  }
 }
